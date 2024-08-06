@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/assets/imgs/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/assets/imgs/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/assets/imgs/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/assets/favicon.webmanifest" />
+        {% block rss %}
+          <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
+        {% endblock %}
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+            integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls"
+            crossorigin="anonymous"
+        />
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+            body {
+                cursor: default;
+                margin: 0;
+                background-color: #efefef;
+                color: #222;
+            }
+        </style>
+        {% block head %} {% endblock %}
+    </head>
+
+    <body>
+        {% block body %} {% endblock %}
+    </body>
+</html>
