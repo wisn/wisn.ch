@@ -1,17 +1,29 @@
 base_url = "https://wisn.ch"
 
-title = "wisn.channeling"
+title = "wisn"
 description = "an ever-growing personal archive to store thoughts, stories, writings, and many more"
 default_language = "en"
 author = "wisn"
 
 compile_sass = true
-build_search_index = true
+build_search_index = false
 generate_feeds = true
 feed_filenames = ["rss.xml"]
 minify_html = true
+
+theme = "apollo"
+taxonomies = [{ name = "tags" }]
 
 [markdown]
 highlight_code = true
 
 [extra]
+theme = "toggle"
+favicon = "/assets/imgs/android-chrome-512x512.png"
+menu = [
+    { name = "/posts", url = "/posts", weight = 1 },
+    # { name = "/about", url = "/about", weight = 2 },
+    # { name = "/tags", url = "/tags", weight = 3 },
+]
+socials = []
+comment = false
