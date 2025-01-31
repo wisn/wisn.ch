@@ -1,0 +1,26 @@
+{
+    "canisters": {
+        "wisn": {
+            "frontend": {
+                "entrypoint": "public/index.html"
+            },
+            "source": [
+                "public"
+            ],
+            "type": "assets"
+        }
+    },
+    "defaults": {
+        "build": {
+            "args": "",
+            "packtool": ""
+        }
+    },
+    "networks": {
+        "local": {
+            "bind": "127.0.0.1:8000",
+            "type": "ephemeral"
+        }
+    },
+    "version": 1
+}
