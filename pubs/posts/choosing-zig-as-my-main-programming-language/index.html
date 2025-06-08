@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link rel="icon" type="image/png" href="/assets/img/logo.png" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="/assets/css/normalize.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.8.0/tufte.min.css"
+        />
+        <link rel="stylesheet" type="text/css" href="/assets/css/default.css" />
+        <title>Choosing Zig as My Main Programming Language</title>
+        <meta property="og:type" content="article" />
+        <meta
+            property="og:title"
+            content="Choosing Zig as My Main Programming Language"
+        />
+        <meta
+            property="og:description"
+            content="I have been exploring many programming languages that have the potential to be my main programming language. After thinking for a while, I finally chose Zig as my main programming language."
+        />
+        <meta
+            property="og:image"
+            content="https://wisn.ch/assets/img/logo.png"
+        />
+        <meta property="og:locale" content="en_US" />
+        <meta
+            property="og:url"
+            content="https://wisn.ch/posts/choosing-zig-as-my-main-programming-language/"
+        />
+        <meta property="article:author" content="Wisnu Adi Nurcahyo" />
+        <meta property="article:published_time" content="2025-06-08" />
+    </head>
+    <body>
+        <header>
+            <section>
+                <nav>
+                    <div>
+                        <a href="/">wisn</a>
+                    </div>
+                    <div>
+                        <a href="/">/home</a>
+                    </div>
+                </nav>
+            </section>
+        </header>
+        <article>
+            <h1>Choosing Zig as My Main Programming Language</h1>
+            <p class="subtitle">Go Zig or Go Home!</p>
+            <section>
+                <p>
+                    In the past few months, I have been exploring many
+                    programming languages that have the potential to be my main
+                    programming language. As I explained in the previous post
+                    about redefining myself, the criteria for the programming
+                    language are simple, timeless, joyful to use, supports
+                    low-level programming, has built-in cross-compilation
+                    support, and has a correct (formally verified) compiler. All
+                    of these are my wishes; whether I can find one that fulfills
+                    everything is another story. I will try to explain the
+                    details below. Please understand that all of the explanation
+                    later is solely based on my view. It might be a baseless
+                    argument and also provoke a debate on which programming
+                    languages are the best. Argue all you want, but I will not
+                    listen. It can be subjective, after all. Enjoy the read if
+                    you will!
+                </p>
+            </section>
+            <section>
+                <h2>Background</h2>
+                <p>
+                    My first programming language is
+                    <a
+                        href="https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation"
+                        >Visual Basic</a
+                    >, a programming language based on
+                    <a href="https://en.wikipedia.org/wiki/BASIC">BASIC</a>, for
+                    building a desktop application on the Windows operating
+                    system. The programming language is fairly simple since the
+                    10-year-old me was able to understand it. I still remember
+                    the time I built my first desktop application. It is a
+                    simple calculator program, developed by following the
+                    instructions given in the book that I read, and then
+                    modifying some of the code myself. This was in 2009 or 2010.
+                    I later developed my own inventory management application,
+                    HTML generator, and many more. All of this was possible
+                    after I taught myself how to code by reading blog posts and
+                    books. I have neither a teacher nor a mentor to teach me how
+                    to code, yet I can do it myself. This is because
+                    conceptually, BASIC is easy to learn. After all, BASIC is
+                    Beginners' All-purpose Symbolic Instruction Code. It is easy
+                    to learn (and use) for a beginner in the programming world
+                    since it has quite a small number of concepts that I need to
+                    understand. I can also see the result visually since Visual
+                    Basic is basically an integrated development environment
+                    (IDE) for BASIC, equipped with desktop app development
+                    toolkits. It means having a small number of syntaxes,
+                    minimal symbols, and visually present play a huge role in
+                    easing the learning process.
+                </p>
+                <p>
+                    Reflecting upon my early days in learning how to code, after
+                    experiencing many things in this field for more than a
+                    decade, the ideal programming language for me started to
+                    take shape. In the professional setting, I have been
+                    programming a lot in
+                    <a href="https://dev.java/">Java</a> and
+                    <a href="https://www.scala-lang.org/">Scala</a> for at least
+                    four years now. Fun fact, I didn’t have a good impression of
+                    Java (and JVM-based programming languages) in my college
+                    days. I applied to a company that uses Java as its main
+                    programming language, to give Java a chance. I mean,
+                    experiencing it firsthand on developing a production-grade
+                    system may change my mind on it. Unfortunately, I still
+                    dislike it. Java is a complex programming language. It has
+                    tons of features, a huge community base, many interesting &
+                    cool libraries available, a wide variety of compilers & JVM
+                    runtimes, and many more. Even the standard library is huge.
+                    Mastering this kind of programming language is a challenge
+                    in itself, moreover, for somebody like me who loves to learn
+                    and use many programming languages. Well, I’m a programming
+                    language agnostic, a polyglot who can use many programming
+                    languages. The problem is that I tend to forget things, so
+                    it is difficult to master several complex programming
+                    languages. I often need to revisit its documentation to
+                    recall some features. However, is there a need to master
+                    several programming languages, though? Well, it is
+                    impossible for a programming language, even a
+                    general-purpose one, to be good at everything. Mastering
+                    several programming languages with different characteristics
+                    that complement each other might benefit me. This post will
+                    show you my main programming language choice.
+                </p>
+            </section>
+            <section>
+                <h2>Simple (Easy to Learn & Understand)</h2>
+                <p>
+                    I love programming because I love thinking while solving a
+                    computational problem. A feature-rich programming language
+                    makes it easy for me to solve most of the problems since
+                    many things are available in the standard library. In this
+                    case, some algorithm implementations and data structures are
+                    already there. There is no need for me to implement it
+                    myself since it can be faulty, such as missing edge cases
+                    and whatnot. In this case, being simple doesn’t mean the
+                    features available are minimal. It is simply that the
+                    programming language is easy to learn and easy to
+                    understand.
+                </p>
+                <p>
+                    A programming language is easy to learn if I can learn it in
+                    a matter of days, or even hours. I mean, I can learn
+                    everything in a short time, like, three days at most. For
+                    example, if I want to learn a programming language, the
+                    steps are usually familiarizing myself with the syntax,
+                    getting to know its basic structure, exploring the paradigms
+                    & type systems, and understanding its first-class use cases.
+                    To get familiar with the syntax, I usually go to the Learn X
+                    in Y Minutes website and see if what I’m looking for is
+                    there. Otherwise, I will just go to its official website and
+                    look for the “quick start” content and skim through it. To
+                    know its basic structure, I usually take notes on how the
+                    code is organized, for example, how a collection of data is
+                    organized together, how a collection of
+                    functions/procedures/methods is organized together, and so
+                    on. To explore the paradigms and the type systems used by
+                    it, I usually look at the code examples available online. I
+                    want to know how the programming language approaches some
+                    problems. Lastly, I will learn more about the use cases of
+                    the programming language. Although most programming
+                    languages nowadays are general-purpose, they still have some
+                    distinctive values compared to each other when solving
+                    specific problems.
+                </p>
+                <p>
+                    One of the characteristics of a simple programming language,
+                    in this case, is easy to understand. That’s why usually we
+                    can just take a look at the “quick start” page, skim through
+                    it, and then understand almost everything. That means most
+                    of the concepts are already familiar, and the things that
+                    need to be remembered are minimal. Both syntax and code
+                    structure are the things that need to be remembered the
+                    most. This is why I love small programming languages.
+                    Anyway, there are some simple programming languages based on
+                    my standard that have the potential to be my main/primary
+                    programming language. I will only list down the ones that
+                    caught my interest. In alphabetical order, they are
+                    <a href="https://www.c-language.org/">C</a>,
+                    <a href="https://c3-lang.org/">C3</a>,
+                    <a href="https://harelang.org/">Hare</a>,
+                    <a href="https://odin-lang.org/">Odin</a>,
+                    <a href="https://webassembly.org/">WebAssembly</a>, and
+                    <a href="https://ziglang.org/">Zig</a>.
+                </p>
+            </section>
+            <section>
+                <h2>Timeless (Stable Syntax & API/ABI)</h2>
+                <p>
+                    In the future, I want to build my own tech company. I need
+                    to develop everything by myself since I don’t have the
+                    privilege of having a lot of money, so I can’t employ anyone
+                    to help me, especially with the software development part.
+                    The progress will be quite slow. Meaning that some parts
+                    will be left untouched after I’m done with it, probably for
+                    a long time. I don’t want to deal with breaking changes when
+                    upgrading the programming language for the legacy parts.
+                    Thus, using a stable programming language is important. It
+                    is helpful if the programming language doesn’t have semantic
+                    updates so often. It should not have many changes related to
+                    its syntax construct and its standard library, unless it is
+                    a new addition. Backward compatibility must be highly
+                    respected. It should have a standardized design, which the
+                    compiler implementation follows. Some programming languages
+                    that caught my interest and lie in this category are, in
+                    alphabetical order, <a href="https://ada-lang.io/">Ada</a>,
+                    C, C3, Hare, and WebAssembly.
+                </p>
+                <p>
+                    There are at least two programming languages from the list
+                    above that are proven to be timeless. They are Ada and C.
+                    Both have a design standard on which the compiler
+                    implementation was based. As long as we specify which
+                    standard we want to use when compiling the source code, it
+                    is highly unlikely that we will have a surprise of suddenly
+                    getting a compilation error or an undefined behavior, unless
+                    the official documentation says so. For example, the C
+                    programming language has ANSI C, C99, C11, C17, and C23
+                    standards. Even today, many programs still use the C99
+                    standard. Don’t believe me? The easiest way to confirm this
+                    is by searching some GitHub repositories that have the C99
+                    topic tag. It has been at least 20 years since the standard
+                    was introduced, and those programs are still good and
+                    running well! This is the quality that I want to have in my
+                    main programming language.
+                </p>
+                <p>
+                    Notice that I listed both Hare and WebAssembly, relatively
+                    new programming languages. Just like any other assembly
+                    language, WebAssembly will be pretty much timeless after
+                    reaching its stable form. I mean, there will be no more
+                    significant changes to its syntax and system calls. It is
+                    not there yet, but it is worth putting on the list. As for
+                    Hare, it is a programming language with a clear goal from
+                    the very beginning. The goal is to be a 100-year programming
+                    language. It will freeze the language when reaching version
+                    1. Meaning there will be no more changes in its syntax,
+                    grammar, and semantics. A really interesting promise. I want
+                    to follow its journey, so it is worth putting on the list.
+                </p>
+            </section>
+            <section>
+                <h2>Joyful to Use</h2>
+                <p>
+                    I got into this field because I think it is fun. It brings
+                    joy to my ordinary life. I can create something out of
+                    nothing with programming. I don’t really care if there is a
+                    super cool programming language out there, if, when I’m
+                    programming with it, it doesn’t spark joy. I think there are
+                    at least two major factors that make programming fun. First,
+                    the programming language itself is friendly. It is easy to
+                    learn, easy to understand, easy to debug, and provides many
+                    conveniences to the users. Second, the available toolchains
+                    are making our lives easier, not the other way round. Like,
+                    the “plug and play” kind of programming language. Just
+                    install it, use it, compile it, and then run it. Who wants
+                    to use a programming language that needs us to maintain tons
+                    of configurations (or parameters) before we can run the
+                    programs? Another thing that is nice to have is the ability
+                    to manage the version of both the programming language
+                    itself and its toolchains. Some of the interesting
+                    programming languages that I have tried and got the spark of
+                    enjoyment in alphabetical order are
+                    <a href="https://go.dev/">Go</a>,
+                    <a href="https://www.rust-lang.org/">Rust</a>, and Zig. I’m
+                    using <a href="https://ubuntu.com/">Ubuntu</a> (GNU/Linux)
+                    as my operating system, so all of my experience is also
+                    affected by this.
+                </p>
+                <p>
+                    Let’s take Rust as an example. To install it on Ubuntu, I
+                    just need to run one simple <code>curl</code> command to
+                    install the version manager as the first step, called
+                    Rustup. The latest version of the Rust programming language
+                    should also be installed during the Rustup installation
+                    process. Otherwise, we can also run the
+                    <code>rustup toolchain install</code> command to install it.
+                    At least both <code>rustc</code> (the Rust compiler) and
+                    <code>cargo</code> (the Rust package manager) should be
+                    installed. Meaning that we can use it right away. This is a
+                    good installation experience. To develop a Rust program in a
+                    more organized way, we can use
+                    <a href="https://doc.rust-lang.org/stable/cargo/">Cargo</a>
+                    to initialize the project. We can also use Cargo to build
+                    and run the project with the <code>cargo build</code> and
+                    <code>cargo run</code> commands, respectively. This is a
+                    good
+                    <a
+                        href="https://github.blog/enterprise-software/collaboration/developer-experience-what-is-it-and-why-should-you-care/"
+                        >developer experience</a
+                    >
+                    (DX). How about the programming experience? Well, the
+                    ownership concept might be a little bit annoying, but if we
+                    understand it and become familiar with it, the overall
+                    experience is really good. It is also easy to create unit
+                    tests for our code since it is supported right away by both
+                    Rust and Cargo. So far, with my little experience with Rust,
+                    the only annoying thing for me is the number of
+                    <code>unwrap</code> methods that I need to call. We see the
+                    <code>unwrap</code> keyword mentioned frequently.
+                </p>
+            </section>
+            <section>
+                <h2>Low-level Programming Support</h2>
+                <p>
+                    I have been working on backend-heavy tasks for at least four
+                    years. Whenever I was assigned to optimization tasks, I got
+                    a sparkle in my eyes. This kind of task is somehow able to
+                    touch my inner child. It triggers and feeds my curiosity. I
+                    need to analyze the problem, find the root cause, come up
+                    with some ideas, try those ideas, tweak & experiment with
+                    them, compare the results, and finally, decide on which is
+                    the best solution of all, while also providing the tradeoff
+                    between them. This is how I’m having fun, and this is how
+                    I’m into programming in the first place. To be able to
+                    freely optimize my programs, I want to have control over
+                    them. It is great if I can control how my program manages
+                    its memory. It is also great if I can put inline assembly
+                    code when needed. I want to develop a performant program
+                    with a small memory footprint. Several programming languages
+                    with low-level programming support caught my interest. In
+                    alphabetical order, they are C, C3, Hare, Odin, Rust, and
+                    Zig.
+                </p>
+            </section>
+            <section>
+                <h2>Built-in Cross-compilation Capability</h2>
+                <p>
+                    In the past year, I have been taking an interest in
+                    blockchain technology, specifically the smart contract part.
+                    A smart contract is a program that runs inside a virtual
+                    machine provided by the blockchain network. The most popular
+                    virtual machine for smart contracts right now is the
+                    Ethereum virtual machine (<a
+                        href="https://ethereum.org/en/developers/docs/evm/"
+                        >EVM</a
+                    >). However, many blockchain projects started to leverage a
+                    WebAssembly-based virtual machine for their smart contracts.
+                    This is fantastic because any programming language that
+                    supports WebAssembly compilation can be used to develop a
+                    smart contract. Thus, I need a programming language with a
+                    compiler that treats WebAssembly as its first-class
+                    compilation target. It is also great if the compiler can
+                    target other targets out of the box as well. I consider it a
+                    bonus point.
+                </p>
+                <p>
+                    Some interesting programming languages with good WebAssembly
+                    compilation support (in alphabetical order) are C, Odin,
+                    Rust, and Zig. Actually, we can use
+                    <a href="https://emscripten.org/">Emscripten</a> to compile
+                    C, <a href="https://isocpp.org/">C++</a>, and any
+                    programming language with
+                    <a href="https://llvm.org/">LLVM</a> bytecode compilation to
+                    WebAssembly. However, a programming language that treats
+                    cross-compilation as its first-class use case does exist. It
+                    is Zig. It even put WebAssembly (and many
+                    architectures/platforms) in the Tier 1 cross-compilation
+                    target. The only problem with Zig is that the programming
+                    language is quite young. There is no major version 1 so far.
+                    Meaning that it is not stable yet. We can use it just fine,
+                    but expect that there will be some big changes later when it
+                    reaches the first major stable version.
+                </p>
+            </section>
+            <section>
+                <h2>Correct, Sound, Formally Verified Compiler</h2>
+                <p>
+                    Imagine that we have a weird bug. We thought that everything
+                    should work. However, for some reason, our program doesn’t
+                    run as we expect it to run. After wasting so much time, like
+                    hours, we finally found out that it is the compiler's fault.
+                    Assuming that we know the specification of the programming
+                    language. The compiler is somehow unable to follow the
+                    specification. This shouldn’t happen. Thus, it is important
+                    for the compiler to be correct and sound, or even better,
+                    the compiler should be formally verified with any kind of
+                    <a href="https://en.wikipedia.org/wiki/Formal_methods"
+                        >formal methods</a
+                    >. It is hard to verify that a compiler behaves correctly
+                    toward its specification on a certain architecture or
+                    platform. I will treat this as a bonus point. However, at
+                    the very least, for most cases, the compiler must be
+                    correct. An interesting programming language that has been
+                    formally verified is
+                    <a href="https://cakeml.org/">CakeML</a>.
+                </p>
+                <p>
+                    CakeML is a verified implementation of
+                    <a
+                        href="https://en.wikipedia.org/wiki/ML_(programming_language)"
+                        >ML</a
+                    >
+                    (Meta Language). ML has several dialects, with
+                    <a href="https://ocaml.org/">OCaml</a> and
+                    <a href="https://fsharp.org/">F#</a> as the most popular
+                    ones. Another dialect that is quite popular is
+                    <a href="https://www.smlnj.org/sml.html">Standard ML</a>.
+                    CakeML is based on a substantial subset of Standard ML. The
+                    main benefit of using a formally verified compiler is that
+                    it offers robust guarantees about software correctness.
+                    However, the tradeoff would be in the verification process.
+                    It may be slowing the compilation process. Thus, a longer
+                    build/compile time. Another issue with any formally verified
+                    compiler would be the velocity of its development. The
+                    compiler itself may not have any new features added for a
+                    long time, since formally proving/verifying those features
+                    takes some time.
+                </p>
+            </section>
+            <section>
+                <h2>Final Verdict</h2>
+                <p>
+                    Unfortunately, there is not a single programming language
+                    that fulfills all of those criteria above. I need to design
+                    and create my own ideal programming language. However, I
+                    don’t have the time for this. So, a compromise needs to be
+                    made for one or two things. After a long process of
+                    researching, trying, and thinking, I finally chose Zig as my
+                    primary programming language. The implication is that I will
+                    learn Zig and master it, to the point that I know everything
+                    inside out. I will also use it for most of my personal
+                    projects. To reiterate, I chose Zig because it is quite
+                    simple, potentially timeless, sparks enjoyment inside my
+                    heart, supports low-level programming, and has great
+                    cross-compilation support. Now, let’s learn Zig together!
+                </p>
+            </section>
+        </article>
+        <footer>
+            <section>
+                All contents on this website are licensed under the
+                <a
+                    href="https://creativecommons.org/licenses/by/4.0/"
+                    target="_blank"
+                    >CC BY 4.0 License </a
+                >.
+            </section>
+        </footer>
+    </body>
+</html>
